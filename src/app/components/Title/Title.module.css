@@ -1,0 +1,15 @@
+.title {
+    /* Cor de destaque (Azul Celeste) */
+    color: var(--primary-color); 
+    
+    /* Responsividade da fonte: min 1.5rem | ideal 5vw | max 3rem */
+    font-size: clamp(1.8rem, 5vw, 2.5rem); 
+    
+    /* Alinhamento e Peso */
+    text-align: center;
+    font-weight: 700; /* Mais negrito para impacto */
+
+    /* Margem: Mais espaço vertical para isolar o título */
+    margin-top: 50px;
+    margin-bottom: 30px; 
+}

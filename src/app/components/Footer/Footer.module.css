@@ -1,0 +1,31 @@
+/* Footer.module.css */
+
+.footer {
+    /* 🎨 Cores Adaptadas */
+    /* Usa a cor de fundo da seção para dar um leve destaque ao rodapé */
+    background-color: var(--section-bg);
+    color: var(--text-secondary); /* Usa cor secundária para o texto padrão */
+    border-top: 1px solid var(--border-color); /* Linha sutil para separar do conteúdo */
+    
+    /* Layout */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Coloca o conteúdo em coluna (Mobile First) */
+    align-items: center;
+    justify-content: center;
+    
+    /* Espaçamento */
+    padding: 20px 20px; /* Padding generoso */
+    margin-top: 40px; 
+    width: 100%;
+    
+    /* 🛑 Revisão de Posição: 
+       Removemos 'position: sticky' e 'bottom: 0' para evitar comportamento inesperado.
+       Um footer geralmente deve vir após todo o conteúdo.
+    */
+    position: relative; /* Posição padrão */
+}
+
+.copyright {
+    font-size: 0.9rem;
+}

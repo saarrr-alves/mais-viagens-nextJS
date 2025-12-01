@@ -1,0 +1,114 @@
+/* Container Principal */
+.contactContainer {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    /* Usa as variáveis globais */
+    background-color: var(--background);
+    border-radius: 8px;
+    /* Usa a cor de sombra global */
+    box-shadow: 0 4px 12px var(--box-shadow-color);
+    border: 1px solid var(--border-color); /* Adiciona uma borda sutil */
+}
+
+.contactTitle {
+    text-align: center;
+    color: var(--primary-color); 
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border-color); /* Usa a cor de borda global */
+    padding-bottom: 10px;
+}
+
+/* Informações de Contato Direto */
+.contactInfoSection {
+    margin-bottom: 30px;
+    padding: 20px;
+    /* Usa a variável de fundo de seção */
+    background-color: var(--section-bg);
+    border-radius: 6px;
+}
+
+.infoTitle {
+    color: var(--foreground); /* Usa a cor principal de texto */
+    margin-bottom: 15px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contactItem {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contactItem a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Chamada para o Formulário */
+.formCallToAction {
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+/* Formulário */
+.formTitle {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-secondary); /* Usa a cor de texto secundária */
+}
+
+/* Estilo unificado para inputs e textarea */
+.formInput,
+.formTextarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    /* Garante que o input/textarea herde o fundo e a cor de texto */
+    background-color: var(--background); 
+    color: var(--foreground);
+}
+
+.formTextarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* Botão de Envio */
+.submitButton {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--success-color); /* Usa a cor de sucesso */
+    color: var(--background); /* Texto do botão deve ser a cor de fundo (branco/claro) */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    /* Escurece a cor de sucesso no hover, garantindo contraste */
+    filter: brightness(0.9);
+}

@@ -1,0 +1,17 @@
+.grid {
+    /* RESPONSIVIDADE INTRÍNSECA: 
+       - Cria colunas que se ajustam automaticamente (`auto-fit`).
+       - Cada coluna tem no mínimo 300px e no máximo 1 fração (`1fr`) do espaço disponível.
+    */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+    /* GARANTE ALINHAMENTO E RESPONSIVIDADE: 
+       - Limita a largura do container do grid para que não fique muito largo no desktop.
+       - Adiciona padding lateral para que o grid não toque as bordas da viewport no mobile.
+    */
+    width: 95%; 
+    max-width: 1400px;
+    margin: 40px auto; /* Centraliza o grid e adiciona margem vertical */
+}

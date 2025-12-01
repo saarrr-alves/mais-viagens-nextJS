@@ -1,0 +1,87 @@
+/* A altura do seu header é aproximadamente 80px (20px padding top + 20px padding bottom + altura do h1) */
+
+.header {
+    width: 100%;
+    background-color: var(--background);
+    color: var(--foreground);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    /* MUDANÇA PRINCIPAL: De sticky para fixed */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    /* Garante que o header fique sobre outros elementos */
+    z-index: 1000; 
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navItem {
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit; 
+}
+
+.navItem:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--foreground);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        /* Em mobile, a altura do header pode ser menor ou a mesma, mantemos 70px como um valor seguro */
+        top: 70px; 
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--background);
+        padding: 20px;
+        box-shadow: 0 2px 4px var(--box-shadow-color);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .navItem {
+        padding: 10px 0;
+    }
+}

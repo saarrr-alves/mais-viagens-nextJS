@@ -1,0 +1,104 @@
+/* ===================================== */
+/* ESTILOS PARA DESTINO ENCONTRADO       */
+/* ===================================== */
+
+.container {
+    padding: 100px 20px 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* Usa a cor de fundo do tema */
+    background-color: var(--background);
+    color: var(--foreground);
+    /* Transição suave para temas/tamanhos de tela */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    /* Transição para cores */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.image {
+    width: 100%;
+    max-width: 800px;
+    /* Centraliza a imagem */
+    display: block; 
+    margin: 0 auto 30px auto;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra um pouco mais forte */
+    /* Transição suave para quando a imagem carrega/muda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.details {
+    padding: 25px; /* Aumentei um pouco o padding */
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Borda um pouco mais arredondada */
+    margin-top: 20px;
+    background-color: var(--card-background, rgba(255, 255, 255, 0.05)); /* Fundo sutil para detalhes */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.detailItem {
+    line-height: 1.6;
+    margin-bottom: 12px; /* Espaçamento um pouco maior */
+    color: var(--foreground);
+}
+
+.detailItem b {
+    color: var(--text-heading, var(--primary-color)); /* Destaca o label */
+}
+
+.price {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color);
+    color: var(--primary-color); 
+    font-weight: bold;
+    text-align: right; /* Preço alinhado à direita para destaque */
+    transition: color 0.3s ease;
+}
+
+/* ===================================== */
+/* ESTILOS PARA DESTINO NÃO ENCONTRADO   */
+/* ===================================== */
+
+.containerNotFound {
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 80vh; /* Aumentei o min-height para centralizar melhor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--foreground);
+    background-color: var(--background);
+    width: 100%;
+    
+    /* Remoção da margem complexa, usando min-height para centralizar */
+    margin: 0 auto; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.containerNotFound h1 {
+    font-size: 2.2rem; /* Aumentei um pouco o tamanho */
+    color: var(--error-color, #ff4d4f); /* Usei uma cor de erro ou primary */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.containerNotFound p {
+    font-size: 1.2rem; /* Aumentei um pouco o tamanho */
+    color: var(--text-secondary);
+    max-width: 500px;
+}
